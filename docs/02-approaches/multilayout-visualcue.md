@@ -63,6 +63,10 @@ It combines classification and extraction so each document is processed by the m
 
 ## Implementation phases
 
+<p align="center">
+<img src="../assets/img/approaches/multilayout-phases.svg" alt="Implementation phases for multi-layout visual cue processing" style="border-radius: 10px; max-width: 100%;"/>
+</p>
+
 1. Baseline: Define family taxonomy and routing labels.
 2. Enablement: Build cue detection and initial strategy packs.
 3. Stabilization: Tune routing confidence and exception handling.

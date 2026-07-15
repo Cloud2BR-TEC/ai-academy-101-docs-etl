@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 200" font-family="Segoe UI, Arial, sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#f8fbff"/>
+      <stop offset="1" stop-color="#eef3fa"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="200" rx="16" fill="url(#bg)"/>
+  <text x="40" y="32" font-size="20" font-weight="700" fill="#0b1f3a">Implementation Phases</text>
+  <text x="40" y="54" font-size="12" fill="#5a6b82">Multi-Layout Visual Cue rollout</text>
+
+  <line x1="80" y1="100" x2="1120" y2="100" stroke="#cbd5e1" stroke-width="3"/>
+  <path d="M204,94 L216,100 L204,106 Z" fill="#94a3b8"/>
+  <path d="M464,94 L476,100 L464,106 Z" fill="#94a3b8"/>
+  <path d="M724,94 L736,100 L724,106 Z" fill="#94a3b8"/>
+  <path d="M984,94 L996,100 L984,106 Z" fill="#94a3b8"/>
+
+  <circle cx="80" cy="100" r="20" fill="#1f6feb"/>
+  <text x="80" y="105" font-size="14" font-weight="700" fill="#ffffff" text-anchor="middle">1</text>
+  <text x="80" y="140" font-size="13" font-weight="700" fill="#1f6feb" text-anchor="middle">Baseline</text>
+  <text x="80" y="160" font-size="11" fill="#5a6b82" text-anchor="middle">Family taxonomy &amp;</text>
+  <text x="80" y="176" font-size="11" fill="#5a6b82" text-anchor="middle">routing labels</text>
+
+  <circle cx="340" cy="100" r="20" fill="#0f766e"/>
+  <text x="340" y="105" font-size="14" font-weight="700" fill="#ffffff" text-anchor="middle">2</text>
+  <text x="340" y="140" font-size="13" font-weight="700" fill="#0f766e" text-anchor="middle">Enablement</text>
+  <text x="340" y="160" font-size="11" fill="#5a6b82" text-anchor="middle">Cue detection &amp;</text>
+  <text x="340" y="176" font-size="11" fill="#5a6b82" text-anchor="middle">strategy packs</text>
+
+  <circle cx="600" cy="100" r="20" fill="#8250df"/>
+  <text x="600" y="105" font-size="14" font-weight="700" fill="#ffffff" text-anchor="middle">3</text>
+  <text x="600" y="140" font-size="13" font-weight="700" fill="#8250df" text-anchor="middle">Stabilization</text>
+  <text x="600" y="160" font-size="11" fill="#5a6b82" text-anchor="middle">Tune routing</text>
+  <text x="600" y="176" font-size="11" fill="#5a6b82" text-anchor="middle">confidence</text>
+
+  <circle cx="860" cy="100" r="20" fill="#bc4c00"/>
+  <text x="860" y="105" font-size="14" font-weight="700" fill="#ffffff" text-anchor="middle">4</text>
+  <text x="860" y="140" font-size="13" font-weight="700" fill="#bc4c00" text-anchor="middle">Expansion</text>
+  <text x="860" y="160" font-size="11" fill="#5a6b82" text-anchor="middle">Add families,</text>
+  <text x="860" y="176" font-size="11" fill="#5a6b82" text-anchor="middle">regression testing</text>
+
+  <circle cx="1120" cy="100" r="20" fill="#b91c1c"/>
+  <text x="1120" y="105" font-size="14" font-weight="700" fill="#ffffff" text-anchor="middle">5</text>
+  <text x="1120" y="140" font-size="13" font-weight="700" fill="#b91c1c" text-anchor="middle">Optimization</text>
+  <text x="1120" y="160" font-size="11" fill="#5a6b82" text-anchor="middle">Reduce misroutes,</text>
+  <text x="1120" y="176" font-size="11" fill="#5a6b82" text-anchor="middle">improve efficiency</text>
+</svg>

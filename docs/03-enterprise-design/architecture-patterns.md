@@ -36,6 +36,10 @@ Its purpose is to show how pattern choice affects architecture composition, deli
 
 ## Pattern selection depth
 
+<p align="center">
+<img src="../assets/img/enterprise/pattern-selection-depth.svg" alt="Pattern selection depth comparison heatmap" style="border-radius: 10px; max-width: 100%;"/>
+</p>
+
 | Dimension | Managed invoice pattern | Layout pattern | Multi-layout pattern | Open framework pattern |
 | --- | --- | --- | --- | --- |
 | Delivery speed | High | Medium | Medium | Medium to low |

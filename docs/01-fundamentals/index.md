@@ -69,6 +69,10 @@ It is designed to provide a common language for technical and non-technical stak
 
 ## Quality and exception strategy
 
+<p align="center">
+<img src="../assets/img/fundamentals/quality-strategy.svg" alt="Quality and exception strategy flow" style="border-radius: 10px; max-width: 100%;"/>
+</p>
+
 1. Define minimum confidence thresholds per critical field and per document family.
 2. Validate extracted payloads against business rules and schema contracts.
 3. Route low-confidence or invalid outputs into exception queues.

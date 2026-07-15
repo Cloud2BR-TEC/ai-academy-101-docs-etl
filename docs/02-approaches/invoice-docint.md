@@ -63,6 +63,10 @@ It focuses on rapid delivery by using prebuilt invoice intelligence while still 
 
 ## Implementation phases
 
+<p align="center">
+<img src="../assets/img/approaches/invoice-docint-phases.svg" alt="Implementation phases for invoice processing with Document Intelligence" style="border-radius: 10px; max-width: 100%;"/>
+</p>
+
 1. Pilot: Start with a narrow invoice domain and baseline quality metrics.
 2. Harden: Add exception handling, runbooks, and governance controls.
 3. Scale: Onboard new invoice families using reusable normalization contracts.

@@ -63,6 +63,10 @@ This approach is useful when structure matters as much as content, for example w
 
 ## Implementation phases
 
+<p align="center">
+<img src="../assets/img/approaches/layout-docint-phases.svg" alt="Implementation phases for layout processing with Document Intelligence" style="border-radius: 10px; max-width: 100%;"/>
+</p>
+
 1. Discover: Inventory document families and define target canonical schema.
 2. Build: Implement first-pass extraction and transformation components.
 3. Validate: Test against edge templates and low-quality scans.

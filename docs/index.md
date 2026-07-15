@@ -33,6 +33,10 @@ The goal is to help architecture, platform, and delivery teams choose the right 
 
 ## Typical adoption path
 
+<p align="center">
+<img src="assets/img/approaches/adoption-path.svg" alt="Typical adoption path from pilot to standardization" style="border-radius: 10px; max-width: 100%;"/>
+</p>
+
 1. Pilot with one high-value document family.
 2. Establish confidence thresholds, quality checks, and exception routes.
 3. Measure throughput, accuracy, and cost per document.

@@ -19,6 +19,10 @@ The purpose is not only to compare features, but to align pattern selection with
 
 ## Decision criteria explained
 
+<p align="center">
+<img src="../assets/img/approaches/decision-criteria.svg" alt="Six decision criteria at a glance" style="border-radius: 10px; max-width: 100%;"/>
+</p>
+
 | Criterion | What to evaluate | Why it matters |
 | --- | --- | --- |
 | Document variability | Number of templates, layout drift, and field position consistency | Determines whether simple extraction is sufficient or routing logic is required |

@@ -63,6 +63,10 @@ It prioritizes flexibility and long-term extensibility for teams that need deepe
 
 ## Implementation phases
 
+<p align="center">
+<img src="../assets/img/approaches/openframework-phases.svg" alt="Implementation phases for invoice processing with open framework" style="border-radius: 10px; max-width: 100%;"/>
+</p>
+
 1. Foundation: Define pipeline stages, contracts, and security baseline.
 2. Assembly: Implement core modules and orchestration paths.
 3. Hardening: Add resilience, exception handling, and operational runbooks.

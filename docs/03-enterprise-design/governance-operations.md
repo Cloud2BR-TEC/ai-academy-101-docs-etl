@@ -50,6 +50,10 @@ This page defines the operating model needed to keep document ETL solutions reli
 
 ## KPI model
 
+<p align="center">
+<img src="../assets/img/enterprise/kpi-model.svg" alt="KPI model with five key signals" style="border-radius: 10px; max-width: 100%;"/>
+</p>
+
 - Extraction precision and recall by document family.
 - End-to-end processing latency.
 - Auto-processing rate vs human review rate.

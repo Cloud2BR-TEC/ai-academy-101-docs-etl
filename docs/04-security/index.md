@@ -52,6 +52,10 @@ This baseline applies to all approach patterns and should be implemented as shar
 
 ## Implementation roadmap
 
+<p align="center">
+<img src="../assets/img/security/implementation-roadmap.svg" alt="Security implementation roadmap" style="border-radius: 10px; max-width: 100%;"/>
+</p>
+
 1. Foundation: Establish identity, network, key management, and logging baseline.
 2. Enablement: Map regulatory requirements to enforceable technical controls.
 3. Validation: Run control testing and close policy gaps before production launch.
