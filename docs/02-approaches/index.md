@@ -15,42 +15,9 @@ Use this page as the selection entry point for the four implementation repositor
 | Multi-Layout Visual Cue | Handles mixed templates and positional anchors well | More complex routing and visual rule maintenance | [PDFs-MultiLayout-VisualCue-AzureAI-Document-Processing](https://github.com/Cloud2BR-MSFTLearningHub/PDFs-MultiLayout-VisualCue-AzureAI-Document-Processing) |
 | Invoice + Open Framework | Maximum extensibility and custom business logic integration | Higher engineering ownership and governance needs | [PDFs-Invoice-Processing-Fapp-OpenFramework](https://github.com/Cloud2BR-MSFTLearningHub/PDFs-Invoice-Processing-Fapp-OpenFramework) |
 
-## Open repository cards
-
-<div class="home-grid">
-
-	<a class="home-card" href="https://github.com/Cloud2BR-MSFTLearningHub/PDFs-Invoice-Processing-Fapp-DocIntelligence">
-		<h3>Invoice Processing Fapp DocIntelligence</h3>
-		<p>Open repository</p>
-	</a>
-
-	<a class="home-card" href="https://github.com/Cloud2BR-MSFTLearningHub/PDFs-Layouts-Processing-Fapp-DocIntelligence">
-		<h3>Layouts Processing Fapp DocIntelligence</h3>
-		<p>Open repository</p>
-	</a>
-
-	<a class="home-card" href="https://github.com/Cloud2BR-MSFTLearningHub/PDFs-MultiLayout-VisualCue-AzureAI-Document-Processing">
-		<h3>MultiLayout VisualCue AzureAI Document Processing</h3>
-		<p>Open repository</p>
-	</a>
-
-	<a class="home-card" href="https://github.com/Cloud2BR-MSFTLearningHub/PDFs-Invoice-Processing-Fapp-OpenFramework">
-		<h3>Invoice Processing Fapp OpenFramework</h3>
-		<p>Open repository</p>
-	</a>
-
-</div>
-
 ## Decision flow
 
-- If your documents are mostly invoices with stable fields, start with **Invoice + Document Intelligence**.
-- If document types vary and table/structure extraction is key, use **Layout + Document Intelligence**.
-- If you have many vendor templates and positional markers, use **Multi-Layout Visual Cue**.
-- If you need a highly customizable and pluggable pipeline, choose **Invoice + Open Framework**.
-
-## Deep dives
-
-- [Invoice Processing with Document Intelligence](invoice-docint.md)
-- [Layout Processing with Document Intelligence](layout-docint.md)
-- [Multi-Layout Visual Cue Processing](multilayout-visualcue.md)
-- [Invoice Processing with Open Framework](invoice-openframework.md)
+- If your documents are mostly invoices with stable fields, start with **[Invoice + Document Intelligence](invoice-docint.md)**.
+- If document types vary and table/structure extraction is key, use **[Layout + Document Intelligence](layout-docint.md)**.
+- If you have many vendor templates and positional markers, use **[Multi-Layout Visual Cue](multilayout-visualcue.md)**.
+- If you need a highly customizable and pluggable pipeline, choose **[Invoice + Open Framework](invoice-openframework.md)**.
