@@ -6,6 +6,11 @@
   <img src="../assets/img/approaches/invoice-docint.svg" alt="Invoice processing with Document Intelligence architecture" style="border-radius:10px;max-width:100%;"/>
 </div>
 
+!!! info "At a glance"
+    Use this pattern when invoices are the dominant document type, standard fields drive the process, and the team wants managed extraction with a controlled validation and review layer.
+
+> **Best-fit signal:** Standard invoice fields and moderate layout variation favor a managed-first implementation.
+
 ## What this approach does
 
 Processes invoice PDFs using Azure Functions and Azure AI Document Intelligence to extract normalized invoice fields for downstream systems.
@@ -60,6 +65,11 @@ It focuses on rapid delivery by using prebuilt invoice intelligence while still 
 - Add confidence threshold handling for low-confidence fields.
 - Implement retry and dead-letter strategy for failed documents.
 - Keep a human-in-the-loop fallback for edge cases.
+
+!!! warning "Managed extraction is not automatic approval"
+  Critical payment fields still require field-specific confidence policies, arithmetic validation, duplicate checks, and a staffed exception process.
+
+> **Control principle:** Treat extraction as proposed data until confidence, business rules, and duplicate checks approve it.
 
 ## Implementation phases
 
@@ -144,6 +154,9 @@ Build the dataset from production-like families and maintain explicit subsets:
 
 For each release, compare field-level results with the current production baseline. Block promotion when critical-field quality, straight-through rate, or exception quality falls outside approved tolerance. Review intentional changes separately from regressions.
 
+!!! tip "Keep past failures in the test set"
+  Every corrected production defect should become a regression example so future model, mapping, or threshold changes cannot silently reintroduce it.
+
 ## Integration and idempotency
 
 Use a stable idempotency key based on trusted source identity, supplier, invoice number, or content hash according to business rules. Record delivery state before and after calling downstream systems. A retry must either return the original result or safely complete the pending transaction without creating a duplicate invoice.
@@ -162,13 +175,12 @@ Monitor at least:
 - Retry volume, poison-queue age, and dependency throttling.
 - Cost per processed and successfully accepted invoice.
 
-## Failure scenarios and response
-
-| Failure | Automated response | Operational action |
-| --- | --- | --- |
-| Extraction timeout | Retry with bounded backoff | Check dependency health and queue age |
-| Unsupported or corrupt file | Quarantine without repeated extraction | Request a valid source document |
-| Missing critical field | Route to review | Correct or reject with reason code |
-| Arithmetic mismatch | Route to review or supplier workflow | Validate totals and business tolerance |
-| Downstream unavailable | Retain accepted payload and retry delivery | Monitor acknowledgement backlog |
-| Duplicate detected | Stop new delivery and link prior record | Confirm duplicate policy and audit trail |
+??? failure "Failure scenarios and response"
+  | Failure | Automated response | Operational action |
+  | --- | --- | --- |
+  | Extraction timeout | Retry with bounded backoff | Check dependency health and queue age |
+  | Unsupported or corrupt file | Quarantine without repeated extraction | Request a valid source document |
+  | Missing critical field | Route to review | Correct or reject with reason code |
+  | Arithmetic mismatch | Route to review or supplier workflow | Validate totals and business tolerance |
+  | Downstream unavailable | Retain accepted payload and retry delivery | Monitor acknowledgement backlog |
+  | Duplicate detected | Stop new delivery and link prior record | Confirm duplicate policy and audit trail |

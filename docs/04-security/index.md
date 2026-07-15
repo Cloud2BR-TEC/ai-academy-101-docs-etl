@@ -8,6 +8,11 @@ This baseline applies to all approach patterns and should be implemented as shar
 <img src="../assets/img/security/security-baseline.svg" alt="Defense-in-depth security baseline layers" style="border-radius: 10px; max-width: 100%;"/>
 </p>
 
+!!! important "Protect business outcomes, not only infrastructure"
+    A pipeline can be available and encrypted while still delivering unsafe data. Security includes identity, data movement, software supply chain, model and rule changes, human review, and validation before authoritative action.
+
+> **Security principle:** Trust must be earned at every transition through identity, policy, validation, and recorded evidence.
+
 ## Baseline controls
 
 - Identity-first access with Microsoft Entra ID.
@@ -65,6 +70,8 @@ This baseline applies to all approach patterns and should be implemented as shar
 !!! note
     Security controls should be applied consistently across all four approaches to avoid governance fragmentation.
 
+> **Assurance principle:** Compliance is not a launch milestone; it is continuous proof that controls remain effective as data, models, and integrations change.
+
 ## Threat model
 
 Start with data flow: where documents originate, which services process them, where derivatives are stored, who can review them, and which systems receive output. Identify trust boundaries and abuse cases at each transition.
@@ -83,6 +90,9 @@ Relevant threats include:
 - Valid-looking but incorrect extraction reaching an authoritative system.
 
 Record mitigations, detection, owner, residual risk, and review trigger. Revisit the model when a new data source, AI capability, integration, region, or human-review tool is introduced.
+
+!!! warning "Treat document content as untrusted input"
+    Validate format, size, source, and content before high-trust processing. This remains true even when the document arrives through an approved storage account or managed event service.
 
 ## Identity architecture
 
@@ -218,19 +228,18 @@ Document Intelligence and optional generative enrichment have different risk pro
 
 Managed-service confidence is not proof that a value is safe. Authorization and business validation remain application responsibilities.
 
-## Third-party and service risk
+??? question "Third-party and managed-service review"
+    For each external or managed service, review:
 
-For each external or managed service, review:
+    - Data location and processing region.
+    - Retention and service configuration.
+    - Contractual and compliance commitments relevant to the organization.
+    - Identity, encryption, logging, and private-connectivity capabilities.
+    - Subprocessors and support-access model where applicable.
+    - Availability, quotas, deprecation policy, and exit strategy.
+    - How data and configuration can be exported, deleted, or migrated.
 
-- Data location and processing region.
-- Retention and service configuration.
-- Contractual and compliance commitments relevant to the organization.
-- Identity, encryption, logging, and private-connectivity capabilities.
-- Subprocessors and support-access model where applicable.
-- Availability, quotas, deprecation policy, and exit strategy.
-- How data and configuration can be exported, deleted, or migrated.
-
-Reassess when service terms, region availability, architecture, or data classification changes.
+    Reassess when service terms, region availability, architecture, or data classification changes.
 
 ## Security monitoring
 
@@ -261,15 +270,14 @@ Prepare playbooks for credential compromise, data exposure, malicious upload, un
 7. Follow legal, privacy, regulatory, and communication procedures.
 8. Add detections and preventive controls based on root cause.
 
-## Security verification checklist
-
-- Threat model and data-flow diagram are current.
-- Every workload and human role has an owner and justified scope.
-- Public endpoints and outbound access are documented and approved.
-- Secrets, certificates, and emergency access have tested lifecycle procedures.
-- Intake controls handle malformed, malicious, oversized, and encrypted files.
-- Sensitive content is excluded from general logs and lower environments.
-- CI/CD enforces security gates and artifact traceability.
-- Security events reach the monitoring and response platform.
-- Backup, restore, deletion, and incident playbooks are tested.
-- Model and rule changes cannot bypass business validation or release approval.
+??? success "Security verification checklist"
+    - Threat model and data-flow diagram are current.
+    - Every workload and human role has an owner and justified scope.
+    - Public endpoints and outbound access are documented and approved.
+    - Secrets, certificates, and emergency access have tested lifecycle procedures.
+    - Intake controls handle malformed, malicious, oversized, and encrypted files.
+    - Sensitive content is excluded from general logs and lower environments.
+    - CI/CD enforces security gates and artifact traceability.
+    - Security events reach the monitoring and response platform.
+    - Backup, restore, deletion, and incident playbooks are tested.
+    - Model and rule changes cannot bypass business validation or release approval.

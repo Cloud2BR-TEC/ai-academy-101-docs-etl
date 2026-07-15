@@ -6,6 +6,11 @@
   <img src="../assets/img/approaches/multilayout-visualcue.svg" alt="Multi-layout visual cue processing architecture" style="border-radius:10px;max-width:100%;"/>
 </div>
 
+!!! info "At a glance"
+    Use this pattern when template families are meaningfully different, can be recognized from stable cues, and benefit from specialized extraction strategies.
+
+> **Best-fit signal:** Family-specific routing is valuable when stable visual differences predict which extraction strategy will perform best.
+
 ## What this approach does
 
 Routes each document to a specialized extraction path based on detected layout signatures and visual cues, improving accuracy for highly variable templates.
@@ -60,6 +65,11 @@ It combines classification and extraction so each document is processed by the m
 - Requires lifecycle management for cue rules/classifiers.
 - Template onboarding process should be formalized.
 - Regression testing is important as new templates are introduced.
+
+!!! warning "Never force an uncertain document into a known family"
+  A low-scoring best candidate is still uncertain. Preserve an explicit unknown route and safe review path instead of choosing a family by default.
+
+> **Routing principle:** Unknown is a valid classification outcome and must lead to a controlled fallback path.
 
 ## Implementation phases
 
@@ -144,6 +154,9 @@ Keeping these artifacts together makes onboarding, rollback, and audit easier. S
 
 ## Template onboarding procedure
 
+!!! tip "Add negative examples"
+  Each family should include documents that look similar but do not belong to it. Negative examples expose confusion risks that positive samples alone cannot reveal.
+
 1. Intake: Capture owner, volume, business use, critical fields, and representative files.
 2. Similarity review: Determine whether the template belongs to an existing family.
 3. Labeling: Add reviewed family labels and expected business fields to the evaluation set.
@@ -180,12 +193,11 @@ Test both routing and extraction because a correct extraction strategy is irrele
 - Strategy-pack exceptions and correction volume.
 - Quality drift by source, scan characteristics, and release version.
 
-## Common failure scenarios
-
-| Scenario | Detection | Response |
-| --- | --- | --- |
-| New unseen template | Low confidence or extraction validation failure | Unknown route and onboarding intake |
-| Similar templates confused | Confusion matrix and correction reasons | Add discriminating cues or merge strategy |
-| Cue removed in redesign | Family-specific recall drop | Update pack through staged release |
-| Scan removes color cue | Input-quality and cue diagnostics | Use non-color backup cues |
-| Wrong family creates valid-looking output | Cross-field or source reconciliation | Stop delivery and investigate routing policy |
+??? failure "Common failure scenarios"
+  | Scenario | Detection | Response |
+  | --- | --- | --- |
+  | New unseen template | Low confidence or extraction validation failure | Unknown route and onboarding intake |
+  | Similar templates confused | Confusion matrix and correction reasons | Add discriminating cues or merge strategy |
+  | Cue removed in redesign | Family-specific recall drop | Update pack through staged release |
+  | Scan removes color cue | Input-quality and cue diagnostics | Use non-color backup cues |
+  | Wrong family creates valid-looking output | Cross-field or source reconciliation | Stop delivery and investigate routing policy |

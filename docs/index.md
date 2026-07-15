@@ -8,6 +8,11 @@ The goal is to help architecture, platform, and delivery teams choose the right 
 <img src="assets/img/approaches/overview-map.svg" alt="Document intelligence approaches overview map" style="border-radius: 10px; max-width: 100%;"/>
 </p>
 
+!!! important "Choose a pattern from evidence, not preference"
+    Start with representative documents, measurable field-quality targets, and the team's long-term ownership capacity. The most sophisticated pattern is not automatically the best fit.
+
+> **Decision lens:** Choose the least complex approach that meets measured quality, control, and integration requirements.
+
 ## Included repositories
 
 | Repository | Best for | Core pattern |
@@ -77,6 +82,8 @@ Before selecting an approach, establish a minimum evidence base. A technically i
 
 ## Typical adoption path
 
+> **Scale principle:** Prove one document family, standardize what works, and expand only with measurable stage exit criteria.
+
 <p align="center">
 <img src="assets/img/approaches/adoption-path.svg" alt="Typical adoption path from pilot to standardization" style="border-radius: 10px; max-width: 100%;"/>
 </p>
@@ -113,31 +120,30 @@ Extraction accuracy alone does not show whether the automation is valuable. Trac
 
 Targets must be defined by use case. A field that triggers payment should generally have stricter acceptance rules than a descriptive field used only for search. The goal is not to maximize automation at any cost; it is to automate decisions only when available evidence supports the business risk.
 
-## Common pitfalls
+??? warning "Common pitfalls to avoid"
+    **Treating every document as one family**
 
-### Treating every document as one family
+    Combining materially different templates into one undifferentiated path often hides weak performance. Segment quality by document family and route documents deliberately.
 
-Combining materially different templates into one undifferentiated path often hides weak performance. Segment quality by document family and route documents deliberately.
+    **Using one confidence threshold**
 
-### Using one confidence threshold
+    A single global threshold ignores field criticality and model behavior. Calibrate thresholds per field or field tier using reviewed outcomes, and combine confidence with deterministic business checks.
 
-A single global threshold ignores field criticality and model behavior. Calibrate thresholds per field or field tier using reviewed outcomes, and combine confidence with deterministic business checks.
+    **Ignoring the exception workflow**
 
-### Ignoring the exception workflow
+    Low-confidence outputs do not disappear. Without a staffed review process, exceptions accumulate and business users lose trust. Define queue ownership, response expectations, correction capture, and replay behavior before launch.
 
-Low-confidence outputs do not disappear. Without a staffed review process, exceptions accumulate and business users lose trust. Define queue ownership, response expectations, correction capture, and replay behavior before launch.
+    **Coupling extraction to downstream systems**
 
-### Coupling extraction to downstream systems
+    Writing model output directly into an ERP or database exposes consumers to provider-specific schema changes. Introduce a canonical contract and version it independently from extraction implementation.
 
-Writing model output directly into an ERP or database exposes consumers to provider-specific schema changes. Introduce a canonical contract and version it independently from extraction implementation.
+    **Measuring only averages**
 
-### Measuring only averages
+    Average accuracy can look acceptable while one vendor or template performs poorly. Segment quality, latency, and exceptions by family, source, language, model version, and processing stage.
 
-Average accuracy can look acceptable while one vendor or template performs poorly. Segment quality, latency, and exceptions by family, source, language, model version, and processing stage.
+    **Underestimating ongoing ownership**
 
-### Underestimating ongoing ownership
-
-Managed AI reduces model-building effort but does not remove template drift, integration changes, security reviews, cost management, or support work. Include ongoing operations in the business case.
+    Managed AI reduces model-building effort but does not remove template drift, integration changes, security reviews, cost management, or support work. Include ongoing operations in the business case.
 
 ## Pattern choice is not permanent
 

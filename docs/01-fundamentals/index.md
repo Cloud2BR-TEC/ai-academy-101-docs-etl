@@ -8,6 +8,11 @@ It is designed to provide a common language for technical and non-technical stak
 <img src="../assets/img/fundamentals/service-flow.svg" alt="End-to-end Azure service flow for document ETL" style="border-radius: 10px; max-width: 100%;"/>
 </p>
 
+!!! note "Read the diagram from left to right"
+	Documents move through ingestion, triggering, extraction, persistence, and operations. Identity and authorization are cross-cutting controls applied at every stage.
+
+> **Core principle:** A production document pipeline is a chain of governed decisions, not a single extraction call.
+
 ## Repositories in scope
 
 - [PDFs-Invoice-Processing-Fapp-DocIntelligence](https://github.com/Cloud2BR-MSFTLearningHub/PDFs-Invoice-Processing-Fapp-DocIntelligence)
@@ -69,6 +74,8 @@ It is designed to provide a common language for technical and non-technical stak
 
 ## Quality and exception strategy
 
+> **Quality principle:** Confidence becomes useful only when it drives an explicit accept, review, retry, or reject outcome.
+
 <p align="center">
 <img src="../assets/img/fundamentals/quality-strategy.svg" alt="Quality and exception strategy flow" style="border-radius: 10px; max-width: 100%;"/>
 </p>
@@ -78,6 +85,9 @@ It is designed to provide a common language for technical and non-technical stak
 3. Route low-confidence or invalid outputs into exception queues.
 4. Add human review workflows for high-impact exceptions.
 5. Feed validated corrections back into rule updates and template onboarding.
+
+!!! tip "Calibrate with reviewed outcomes"
+	Confidence scores vary by field, template, scan quality, and model version. Set thresholds from a representative golden dataset rather than copying values from another workload.
 
 ## Performance and cost fundamentals
 
@@ -174,16 +184,15 @@ Define retention separately for source files, raw extraction responses, normaliz
 - Retain enough provenance to explain past processing decisions without retaining unnecessary sensitive content.
 - Test deletion and legal-hold procedures before relying on them for compliance.
 
-## Troubleshooting by symptom
-
-| Symptom | Likely causes | First checks |
-| --- | --- | --- |
-| Growing queue age | Throttling, reduced function capacity, slow dependency | Dependency response codes, concurrency, recent volume |
-| Sudden quality drop | New template, scan degradation, model/API change | Segment by source and family, compare versions |
-| Duplicate downstream records | Retry without idempotency, repeated source event | Content hash, event ID, delivery acknowledgement |
-| Missing documents | Trigger configuration, filter rule, permissions | Storage event, subscription health, dead-letter destination |
-| Rising human review | Threshold drift, new layouts, mapping failures | Reason codes, confidence distribution, family mix |
-| Cost spike | Page-volume growth, retry loop, retention growth | Usage by service and stage, failed-call volume, storage tier |
+??? failure "Troubleshooting quick reference"
+	| Symptom | Likely causes | First checks |
+	| --- | --- | --- |
+	| Growing queue age | Throttling, reduced function capacity, slow dependency | Dependency response codes, concurrency, recent volume |
+	| Sudden quality drop | New template, scan degradation, model/API change | Segment by source and family, compare versions |
+	| Duplicate downstream records | Retry without idempotency, repeated source event | Content hash, event ID, delivery acknowledgement |
+	| Missing documents | Trigger configuration, filter rule, permissions | Storage event, subscription health, dead-letter destination |
+	| Rising human review | Threshold drift, new layouts, mapping failures | Reason codes, confidence distribution, family mix |
+	| Cost spike | Page-volume growth, retry loop, retention growth | Usage by service and stage, failed-call volume, storage tier |
 
 ## How to use this overview
 

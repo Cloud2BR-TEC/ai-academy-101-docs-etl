@@ -6,6 +6,11 @@ This page defines the operating model needed to keep document ETL solutions reli
 <img src="../assets/img/enterprise/governance-operations.svg" alt="Governance and operations continuous cycle model" style="border-radius: 10px; max-width: 100%;"/>
 </p>
 
+!!! important "Governance needs named decision owners"
+	Assign accountability for business acceptance, document quality, platform operation, security controls, and production changes. A control without an owner and evidence is only an intention.
+
+> **Governance principle:** A control is operational only when it has an owner, an enforcement mechanism, and reviewable evidence.
+
 ## Governance priorities
 
 - Define data classification and retention per document type.
@@ -60,6 +65,11 @@ This page defines the operating model needed to keep document ETL solutions reli
 - Failure rate by pipeline stage.
 - Cost per processed document.
 
+!!! tip "Segment before you aggregate"
+	Report quality and exceptions by document family, source, version, and critical field. Portfolio averages can hide a failing supplier or newly introduced template.
+
+> **Operations principle:** Aggregate dashboards show scale; segmented metrics reveal where intervention is needed.
+
 ## KPI interpretation guidance
 
 - Rising latency with stable volume often indicates queue, function, or dependency bottlenecks.
@@ -96,20 +106,19 @@ Not every change carries the same risk.
 
 A change record should include scope, affected families, versions, quality comparison, contract impact, security impact, rollout, rollback, owner, and monitoring window.
 
-## Evidence package for releases
+??? abstract "Release evidence package"
+	For meaningful production changes, retain:
 
-For meaningful production changes, retain:
+	- Pull request and approved requirements.
+	- Automated test, contract, and golden-dataset results.
+	- Quality comparison by critical field and family.
+	- Security and dependency scan results.
+	- Infrastructure plan and policy evaluation.
+	- Data-contract compatibility evidence.
+	- Deployment approval, artifact identity, and release timestamp.
+	- Post-release verification and observed metrics.
 
-- Pull request and approved requirements.
-- Automated test, contract, and golden-dataset results.
-- Quality comparison by critical field and family.
-- Security and dependency scan results.
-- Infrastructure plan and policy evaluation.
-- Data-contract compatibility evidence.
-- Deployment approval, artifact identity, and release timestamp.
-- Post-release verification and observed metrics.
-
-Automate evidence capture in CI/CD where possible. Manual screenshots are difficult to reproduce and easy to omit.
+	Automate evidence capture in CI/CD where possible. Manual screenshots are difficult to reproduce and easy to omit.
 
 ## Incident classification
 
@@ -135,20 +144,19 @@ Define exact response and communication targets according to organizational poli
 
 Track incidents to problem records when the underlying condition can recur. Verify corrective actions through tests or control changes rather than closing them after documentation alone.
 
-## Runbook structure
+??? example "Runbook structure"
+	Every actionable alert should link to a runbook containing:
 
-Every actionable alert should link to a runbook containing:
+	- Symptom and business impact.
+	- Dashboard and queries needed for diagnosis.
+	- Safe first actions and actions that require approval.
+	- Common causes and discriminating checks.
+	- Retry, replay, rollback, or failover procedure.
+	- Escalation contacts and communication template.
+	- Evidence to preserve.
+	- Verification that service and data are healthy afterward.
 
-- Symptom and business impact.
-- Dashboard and queries needed for diagnosis.
-- Safe first actions and actions that require approval.
-- Common causes and discriminating checks.
-- Retry, replay, rollback, or failover procedure.
-- Escalation contacts and communication template.
-- Evidence to preserve.
-- Verification that service and data are healthy afterward.
-
-Test runbooks through exercises. A document that is correct but cannot be followed during an incident is not an operational control.
+	Test runbooks through exercises. A document that is correct but cannot be followed during an incident is not an operational control.
 
 ## Quality governance cadence
 

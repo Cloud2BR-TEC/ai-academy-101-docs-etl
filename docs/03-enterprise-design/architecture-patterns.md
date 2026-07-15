@@ -8,6 +8,11 @@ Its purpose is to show how pattern choice affects architecture composition, deli
 <img src="../assets/img/enterprise/architecture-blocks.svg" alt="Reference architecture blocks for document ETL pipelines" style="border-radius: 10px; max-width: 100%;"/>
 </p>
 
+!!! important "Logical stages do not require one service each"
+	Preserve clear responsibilities and contracts, but combine deployment units until scaling, security, ownership, or failure-isolation evidence justifies another boundary.
+
+> **Architecture principle:** Separate responsibilities logically first; separate deployments only when operational evidence requires it.
+
 ## Reference architecture blocks
 
 - Ingestion: Blob Storage, queues, event triggers.
@@ -48,6 +53,11 @@ Its purpose is to show how pattern choice affects architecture composition, deli
 3. Implement replay tooling for controlled reprocessing.
 4. Use circuit-breaking controls for unstable external dependencies.
 5. Add fallback logic for low-confidence extraction outcomes.
+
+!!! tip "Design replay before the first incident"
+	Record durable stage state, versions, and idempotency keys from day one. Retrofitting safe replay after partial downstream delivery is significantly harder.
+
+> **Resilience principle:** A retry repeats execution; a safe replay reproduces intent without duplicating business effects.
 
 ## Enterprise rollout model
 
@@ -125,21 +135,20 @@ Define requirements from business impact before selecting multi-region complexit
 
 A durable queue can allow processing to pause without losing documents, which may satisfy many workloads without active-active regional processing. High availability is not the same as disaster recovery: availability handles component failure; disaster recovery restores service after a broader loss.
 
-## Multi-region patterns
+??? info "Multi-region deployment patterns"
+	**Active-passive**
 
-### Active-passive
+	One region processes traffic while a secondary region contains deployable infrastructure and replicated state. It is simpler to govern but requires tested failover and an acceptable recovery time.
 
-One region processes traffic while a secondary region contains deployable infrastructure and replicated state. It is simpler to govern but requires tested failover and an acceptable recovery time.
+	**Active-active**
 
-### Active-active
+	Multiple regions process simultaneously. This can improve availability and proximity but introduces document ownership, duplicate prevention, data consistency, model availability, and cross-region observability challenges.
 
-Multiple regions process simultaneously. This can improve availability and proximity but introduces document ownership, duplicate prevention, data consistency, model availability, and cross-region observability challenges.
+	**Regional ingestion with centralized processing**
 
-### Regional ingestion with centralized processing
+	Documents enter through regional boundaries for residency or latency, then approved metadata or content moves to a central processor. Verify whether movement satisfies classification and residency policy.
 
-Documents enter through regional boundaries for residency or latency, then approved metadata or content moves to a central processor. Verify whether movement satisfies classification and residency policy.
-
-For any topology, document service availability by region, storage and database replication mode, secret and configuration recovery, DNS or routing failover, and how queued work is reconciled after failback.
+	For any topology, document service availability by region, storage and database replication mode, secret and configuration recovery, DNS or routing failover, and how queued work is reconciled after failback.
 
 ## Data recovery and replay
 

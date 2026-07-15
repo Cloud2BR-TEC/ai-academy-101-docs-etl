@@ -6,6 +6,11 @@
   <img src="../assets/img/approaches/layout-docint.svg" alt="Layout processing with Document Intelligence architecture" style="border-radius:10px;max-width:100%;"/>
 </div>
 
+!!! info "At a glance"
+    Use this pattern when document structure, tables, and relative position matter, but a family-specific visual router is not yet justified.
+
+> **Best-fit signal:** Use layout extraction when structure carries meaning and deterministic mapping can produce a stable business schema.
+
 ## What this approach does
 
 Extracts layout structures (paragraphs, lines, tables, key blocks) from PDFs, then applies transformation logic to produce machine-usable ETL outputs.
@@ -60,6 +65,11 @@ This approach is useful when structure matters as much as content, for example w
 - Requires robust transformation mapping.
 - Schema drift handling should be versioned.
 - Observability is key for extraction quality trends.
+
+!!! warning "Layout output is not a business contract"
+  Lines, tables, and coordinates still need explicit semantic mapping, normalization, validation, and versioning before downstream use.
+
+> **Mapping principle:** Preserve raw structural evidence, but expose only normalized and validated entities to downstream consumers.
 
 ## Implementation phases
 
@@ -140,6 +150,9 @@ Document layouts and downstream requirements both change. Use independent versio
 
 ## Mapping test framework
 
+!!! tip "Test structure and meaning separately"
+  A table can be detected correctly while its columns are mapped to the wrong business fields. Measure extraction structure and semantic mapping as separate quality gates.
+
 ### Rule-level tests
 
 Provide small structural fixtures for each mapping rule, including missing labels, duplicated labels, malformed tables, and locale variants.
@@ -168,16 +181,15 @@ Track more than OCR accuracy:
 - Exceptions by mapping rule and source.
 - Quality changes after extraction, mapping, or contract releases.
 
-## Failure handling
-
-| Failure | Meaning | Recommended response |
-| --- | --- | --- |
-| No readable text | Corrupt, protected, or poor-quality source | Quarantine and request reacquisition |
-| Unexpected layout | Mapping preconditions do not match | Route to unknown-family review |
-| Missing section | Optional content or template drift | Apply explicit optional rule or exception |
-| Table structure mismatch | Columns/rows differ from known shape | Preserve raw table and route for mapping review |
-| Contract validation failure | Normalized output is unsafe to publish | Stop delivery and record field-level errors |
-| Downstream rejects version | Consumer compatibility issue | Retry only after contract or adapter correction |
+??? failure "Failure handling reference"
+  | Failure | Meaning | Recommended response |
+  | --- | --- | --- |
+  | No readable text | Corrupt, protected, or poor-quality source | Quarantine and request reacquisition |
+  | Unexpected layout | Mapping preconditions do not match | Route to unknown-family review |
+  | Missing section | Optional content or template drift | Apply explicit optional rule or exception |
+  | Table structure mismatch | Columns/rows differ from known shape | Preserve raw table and route for mapping review |
+  | Contract validation failure | Normalized output is unsafe to publish | Stop delivery and record field-level errors |
+  | Downstream rejects version | Consumer compatibility issue | Retry only after contract or adapter correction |
 
 ## Scaling mapping ownership
 

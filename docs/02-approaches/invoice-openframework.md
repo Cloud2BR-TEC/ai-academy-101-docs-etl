@@ -6,6 +6,11 @@
   <img src="../assets/img/approaches/invoice-openframework.svg" alt="Invoice processing with open framework architecture" style="border-radius:10px;max-width:100%;"/>
 </div>
 
+!!! info "At a glance"
+    Use this pattern when custom orchestration and reusable business processors provide clear value and the organization can operate a software platform over time.
+
+> **Best-fit signal:** Choose extensibility only when custom stages create enough business value to justify permanent platform ownership.
+
 ## What this approach does
 
 Implements invoice ETL using an open and modular framework, enabling custom orchestration steps, enrichment, and integration logic.
@@ -60,6 +65,11 @@ It prioritizes flexibility and long-term extensibility for teams that need deepe
 - Higher implementation and maintenance effort.
 - Requires stronger engineering governance.
 - Security and compliance controls must be standardized early.
+
+!!! warning "Customization creates permanent ownership"
+  Every processor adds contracts, tests, dependencies, observability, security review, upgrade work, and incident responsibility. Build only where managed or shared capabilities cannot satisfy the requirement.
+
+> **Design principle:** Every processor should have one responsibility, a versioned contract, isolated tests, and observable outcomes.
 
 ## Implementation phases
 
@@ -140,6 +150,9 @@ For each proposed custom processor, document:
 5. Test and support plan.
 6. Exit or replacement strategy.
 
+!!! tip "Centralize platform concerns"
+  Provide identity, telemetry, retries, exception codes, and policy enforcement through shared framework components so domain processors remain small and focused.
+
 ## Versioning and compatibility
 
 Version processor code separately from its contract and configuration. A new implementation can remain contract-compatible, while a breaking contract requires coordinated migration.
@@ -208,13 +221,12 @@ Assign owners at both platform and processor levels. The platform team owns runt
 
 Useful metrics include processor success and retry rates, execution duration, queue age, contract failures, version distribution, circuit-breaker state, resource consumption, review volume, and business quality by strategy.
 
-## Failure recovery
-
-| Failure scope | Recovery pattern |
-| --- | --- |
-| Transient processor dependency | Bounded retry with backoff and idempotency |
-| Permanent document defect | Quarantine with reason and remediation owner |
-| Processor release regression | Route back to prior version and replay affected work |
-| Downstream partial completion | Reconcile acknowledgement and compensate or resume safely |
-| Contract incompatibility | Stop unsafe delivery and restore compatible adapter |
-| Region or platform outage | Resume from durable state according to recovery objectives |
+??? failure "Failure recovery reference"
+  | Failure scope | Recovery pattern |
+  | --- | --- |
+  | Transient processor dependency | Bounded retry with backoff and idempotency |
+  | Permanent document defect | Quarantine with reason and remediation owner |
+  | Processor release regression | Route back to prior version and replay affected work |
+  | Downstream partial completion | Reconcile acknowledgement and compensate or resume safely |
+  | Contract incompatibility | Stop unsafe delivery and restore compatible adapter |
+  | Region or platform outage | Resume from durable state according to recovery objectives |

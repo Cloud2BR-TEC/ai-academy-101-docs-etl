@@ -8,6 +8,11 @@ The purpose is not only to compare features, but to align pattern selection with
 <img src="../assets/img/approaches/decision-matrix.svg" alt="Decision matrix for document intelligence approaches" style="border-radius: 10px; max-width: 100%;"/>
 </p>
 
+!!! important "Eliminate infeasible options first"
+	Apply hard constraints such as data residency, unsupported file characteristics, response time, and ownership capacity before optimizing for delivery speed or flexibility.
+
+> **Selection principle:** Evidence from representative documents should eliminate options before preference is allowed to rank them.
+
 ## Quick comparison
 
 | Approach | Strengths | Watchouts | Repo |
@@ -40,6 +45,8 @@ The purpose is not only to compare features, but to align pattern selection with
 - If you need a highly customizable and pluggable pipeline, choose **[Invoice + Open Framework](invoice-openframework.md)**.
 
 ## Practical selection workflow
+
+> **Pilot principle:** The purpose of a pilot is to expose quality, exception, cost, and ownership realities before architecture becomes expensive to change.
 
 1. Pick one representative document set for each major business flow.
 2. Score each set on variability, required accuracy, and integration complexity.
@@ -77,39 +84,36 @@ Create a short decision record containing:
 
 The simplest technically viable pattern is often preferable, but migration cost matters. A quick implementation that tightly couples provider output to downstream systems can become more expensive than a slightly more structured initial design.
 
-## Hybrid patterns
+??? info "Hybrid patterns and migration signals"
+	The four approaches are not mutually exclusive. A production estate can route documents through several paths while preserving one canonical output contract.
 
-The four approaches are not mutually exclusive. A production estate can route documents through several paths while preserving one canonical output contract.
+	- **Managed-first with fallback:** Process ordinary invoices with the prebuilt invoice model and route unsupported variants to review or a custom processor.
+	- **Classification then specialization:** Use visual cues to identify a family, then call either invoice or layout extraction.
+	- **Layout plus semantic enrichment:** Extract structure deterministically, then use language reasoning only for ambiguous or unstructured sections.
+	- **Open orchestration with managed processors:** Use a modular framework for control flow while retaining Document Intelligence as an extraction component.
 
-- Managed-first with fallback: Process ordinary invoices with the prebuilt invoice model and route unsupported variants to review or a custom processor.
-- Classification then specialization: Use visual cues to identify a family, then call either invoice or layout extraction.
-- Layout plus semantic enrichment: Extract structure deterministically, then use language reasoning only for ambiguous or unstructured sections.
-- Open orchestration with managed processors: Use a modular framework for control flow while retaining Document Intelligence as an extraction component.
+	**Move beyond managed invoice extraction when:**
 
-Hybrid designs add routing and testing complexity. Adopt them only when segmented metrics show that one path cannot meet requirements efficiently.
+	- A growing share of documents needs family-specific preprocessing or postprocessing.
+	- Critical fields depend on positional or visual signals not captured reliably.
+	- Exception volume is concentrated in stable, identifiable template families.
+	- Custom branching, enrichment, or integration work exceeds the extraction logic itself.
 
-## Migration signals
+	**Add multi-layout routing when:**
 
-### Move beyond managed invoice extraction when
+	- Quality varies materially by vendor or template.
+	- Templates can be classified with stable distinguishing features.
+	- Family-specific extraction strategies outperform one generic path.
+	- The team can own classifier evaluation and strategy-pack lifecycle.
 
-- A growing share of documents needs family-specific preprocessing or postprocessing.
-- Critical fields depend on positional or visual signals not captured reliably.
-- Exception volume is concentrated in stable, identifiable template families.
-- Custom branching, enrichment, or integration work exceeds the extraction logic itself.
+	**Introduce an open framework when:**
 
-### Add multi-layout routing when
+	- Pipeline stages require independent versioning and deployment.
+	- Several business domains need shared custom processors.
+	- Portability or orchestration control is a strategic requirement.
+	- Engineering and operations teams can support a platform, not only a project.
 
-- Quality varies materially by vendor or template.
-- Templates can be classified with stable distinguishing features.
-- Family-specific extraction strategies outperform one generic path.
-- The team can own classifier evaluation and strategy-pack lifecycle.
-
-### Introduce an open framework when
-
-- Pipeline stages require independent versioning and deployment.
-- Several business domains need shared custom processors.
-- Portability or orchestration control is a strategic requirement.
-- Engineering and operations teams can support a platform, not only a project.
+	Hybrid designs add routing and testing complexity. Adopt them only when segmented metrics show that one path cannot meet requirements efficiently.
 
 ## Proof-of-value design
 
