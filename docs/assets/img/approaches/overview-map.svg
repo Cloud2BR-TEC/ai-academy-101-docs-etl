@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 620" font-family="Segoe UI, Arial, sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#f8fbff"/>
+      <stop offset="1" stop-color="#eef3fa"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="620" rx="18" fill="url(#bg)"/>
+  <text x="40" y="52" font-size="30" font-weight="700" fill="#0b1f3a">Document Intelligence Approaches</text>
+  <text x="40" y="80" font-size="16" fill="#5a6b82">Four implementation patterns for document ETL on Azure</text>
+
+  <rect x="40" y="120" width="270" height="180" rx="12" fill="#ffffff" stroke="#1f6feb" stroke-width="2"/>
+  <text x="58" y="154" font-size="18" font-weight="700" fill="#1f6feb">Invoice + DocInt</text>
+  <text x="58" y="180" font-size="14" fill="#33445a">Fast invoice extraction</text>
+  <text x="58" y="204" font-size="14" fill="#33445a">Managed intelligence flow</text>
+
+  <rect x="330" y="120" width="270" height="180" rx="12" fill="#ffffff" stroke="#1a7f64" stroke-width="2"/>
+  <text x="348" y="154" font-size="18" font-weight="700" fill="#1a7f64">Layout + DocInt</text>
+  <text x="348" y="180" font-size="14" fill="#33445a">Generic structure extraction</text>
+  <text x="348" y="204" font-size="14" fill="#33445a">Schema transformation ready</text>
+
+  <rect x="620" y="120" width="270" height="180" rx="12" fill="#ffffff" stroke="#8250df" stroke-width="2"/>
+  <text x="638" y="154" font-size="18" font-weight="700" fill="#8250df">Multi-Layout Cue</text>
+  <text x="638" y="180" font-size="14" fill="#33445a">Template family routing</text>
+  <text x="638" y="204" font-size="14" fill="#33445a">Visual anchor extraction</text>
+
+  <rect x="910" y="120" width="250" height="180" rx="12" fill="#ffffff" stroke="#bc4c00" stroke-width="2"/>
+  <text x="928" y="154" font-size="18" font-weight="700" fill="#bc4c00">Invoice + Open</text>
+  <text x="928" y="180" font-size="14" fill="#33445a">Modular custom pipeline</text>
+  <text x="928" y="204" font-size="14" fill="#33445a">Deep orchestration control</text>
+
+  <rect x="120" y="350" width="960" height="210" rx="14" fill="#ffffff" stroke="#d9e2ef"/>
+  <text x="150" y="386" font-size="20" font-weight="700" fill="#0b1f3a">Shared Enterprise Layers</text>
+  <text x="150" y="418" font-size="15" fill="#33445a">Ingestion -> Extraction -> Validation -> Normalization -> Integration -> Monitoring</text>
+  <text x="150" y="448" font-size="15" fill="#33445a">Security: Entra ID, Key Vault, Private Endpoints, Defender, Sentinel</text>
+  <text x="150" y="478" font-size="15" fill="#33445a">Governance: Policy, data classification, audit trail, KPI dashboards</text>
+</svg>

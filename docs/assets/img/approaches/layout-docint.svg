@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 520" font-family="Segoe UI, Arial, sans-serif">
+  <rect width="1100" height="520" rx="16" fill="#f3fbf7"/>
+  <text x="34" y="44" font-size="28" font-weight="700" fill="#0b1f3a">Layout + Document Intelligence</text>
+  <rect x="60" y="90" width="220" height="88" rx="10" fill="#ffffff" stroke="#1a7f64"/>
+  <text x="94" y="140" font-size="16" fill="#1a7f64">Mixed PDFs</text>
+  <rect x="350" y="90" width="250" height="88" rx="10" fill="#ffffff" stroke="#1a7f64"/>
+  <text x="372" y="140" font-size="16" fill="#1a7f64">Layout Extraction</text>
+  <rect x="670" y="90" width="250" height="88" rx="10" fill="#ffffff" stroke="#1a7f64"/>
+  <text x="692" y="140" font-size="16" fill="#1a7f64">Schema Transform</text>
+  <line x1="280" y1="134" x2="350" y2="134" stroke="#1a7f64" stroke-width="3"/>
+  <line x1="600" y1="134" x2="670" y2="134" stroke="#1a7f64" stroke-width="3"/>
+  <rect x="60" y="230" width="960" height="220" rx="12" fill="#ffffff" stroke="#d9e2ef"/>
+  <text x="90" y="278" font-size="18" font-weight="700" fill="#0b1f3a">Key notes</text>
+  <text x="90" y="312" font-size="15" fill="#33445a">- Strong for varied forms and reports where structure matters</text>
+  <text x="90" y="340" font-size="15" fill="#33445a">- Invest in robust mapping and schema versioning</text>
+  <text x="90" y="368" font-size="15" fill="#33445a">- Track extraction quality by document family</text>
+</svg>

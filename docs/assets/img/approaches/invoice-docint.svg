@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 520" font-family="Segoe UI, Arial, sans-serif">
+  <rect width="1100" height="520" rx="16" fill="#f6faff"/>
+  <text x="34" y="44" font-size="28" font-weight="700" fill="#0b1f3a">Invoice + Document Intelligence</text>
+  <rect x="40" y="90" width="180" height="88" rx="10" fill="#ffffff" stroke="#1f6feb"/>
+  <text x="65" y="140" font-size="16" fill="#1f6feb">Invoice PDF</text>
+  <rect x="300" y="90" width="220" height="88" rx="10" fill="#ffffff" stroke="#1f6feb"/>
+  <text x="320" y="140" font-size="16" fill="#1f6feb">Azure Function Trigger</text>
+  <rect x="600" y="90" width="260" height="88" rx="10" fill="#ffffff" stroke="#1f6feb"/>
+  <text x="620" y="140" font-size="16" fill="#1f6feb">Document Intelligence</text>
+  <rect x="920" y="90" width="140" height="88" rx="10" fill="#ffffff" stroke="#1f6feb"/>
+  <text x="938" y="140" font-size="16" fill="#1f6feb">Output</text>
+  <line x1="220" y1="134" x2="300" y2="134" stroke="#1f6feb" stroke-width="3"/>
+  <line x1="520" y1="134" x2="600" y2="134" stroke="#1f6feb" stroke-width="3"/>
+  <line x1="860" y1="134" x2="920" y2="134" stroke="#1f6feb" stroke-width="3"/>
+  <rect x="40" y="240" width="1020" height="220" rx="12" fill="#ffffff" stroke="#d9e2ef"/>
+  <text x="70" y="286" font-size="18" font-weight="700" fill="#0b1f3a">Key notes</text>
+  <text x="70" y="320" font-size="15" fill="#33445a">- Best for standard invoices with known fields</text>
+  <text x="70" y="348" font-size="15" fill="#33445a">- Add confidence thresholds and exception routing</text>
+  <text x="70" y="376" font-size="15" fill="#33445a">- Use managed identities and Key Vault for secure integration</text>
+</svg>

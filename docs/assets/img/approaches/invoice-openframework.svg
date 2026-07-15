@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 520" font-family="Segoe UI, Arial, sans-serif">
+  <rect width="1100" height="520" rx="16" fill="#fff6f0"/>
+  <text x="34" y="44" font-size="28" font-weight="700" fill="#0b1f3a">Invoice + Open Framework</text>
+  <rect x="60" y="90" width="170" height="88" rx="10" fill="#ffffff" stroke="#bc4c00"/>
+  <text x="90" y="140" font-size="16" fill="#bc4c00">Ingest</text>
+  <rect x="280" y="90" width="170" height="88" rx="10" fill="#ffffff" stroke="#bc4c00"/>
+  <text x="304" y="140" font-size="16" fill="#bc4c00">Extract</text>
+  <rect x="500" y="90" width="170" height="88" rx="10" fill="#ffffff" stroke="#bc4c00"/>
+  <text x="518" y="140" font-size="16" fill="#bc4c00">Enrich</text>
+  <rect x="720" y="90" width="170" height="88" rx="10" fill="#ffffff" stroke="#bc4c00"/>
+  <text x="740" y="140" font-size="16" fill="#bc4c00">Validate</text>
+  <rect x="940" y="90" width="120" height="88" rx="10" fill="#ffffff" stroke="#bc4c00"/>
+  <text x="958" y="140" font-size="16" fill="#bc4c00">Route</text>
+  <line x1="230" y1="134" x2="280" y2="134" stroke="#bc4c00" stroke-width="3"/>
+  <line x1="450" y1="134" x2="500" y2="134" stroke="#bc4c00" stroke-width="3"/>
+  <line x1="670" y1="134" x2="720" y2="134" stroke="#bc4c00" stroke-width="3"/>
+  <line x1="890" y1="134" x2="940" y2="134" stroke="#bc4c00" stroke-width="3"/>
+  <rect x="60" y="230" width="1000" height="220" rx="12" fill="#ffffff" stroke="#d9e2ef"/>
+  <text x="90" y="278" font-size="18" font-weight="700" fill="#0b1f3a">Key notes</text>
+  <text x="90" y="312" font-size="15" fill="#33445a">- Modular pipeline with pluggable business logic</text>
+  <text x="90" y="340" font-size="15" fill="#33445a">- Suitable when enterprise integration complexity is high</text>
+  <text x="90" y="368" font-size="15" fill="#33445a">- Requires strong engineering governance and testing discipline</text>
+</svg>

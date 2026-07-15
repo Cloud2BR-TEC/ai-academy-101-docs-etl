@@ -1,0 +1,183 @@
+@media (min-width: 76.25em) {
+  .md-grid {
+    max-width: 98%;
+  }
+
+  /* Narrower left sidebar */
+  .md-sidebar--primary {
+    width: 8.8rem;
+  }
+
+  .md-sidebar--primary .md-sidebar__scrollwrap {
+    width: 8.8rem;
+  }
+}
+
+[data-md-color-scheme="default"] {
+  --md-primary-fg-color: #003366;
+  --md-primary-fg-color--light: #004a99;
+  --md-primary-fg-color--dark: #00264d;
+  --md-accent-fg-color: #004a99;
+}
+
+.md-typeset a,
+.md-tabs__link {
+  color: #004a99;
+}
+
+.md-typeset a:hover,
+.md-tabs__link:hover {
+  color: #003874;
+}
+
+.md-content__inner.md-typeset {
+  font-size: 0.78rem;
+}
+
+.md-content__inner.md-typeset h1 { font-size: 1.3rem; }
+.md-content__inner.md-typeset h2 { font-size: 1.05rem; }
+.md-content__inner.md-typeset h3 { font-size: 0.9rem; }
+
+.home-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+@media (max-width: 44rem) {
+  .home-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+a.home-card,
+a.home-card:visited {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #dde3ed;
+  border-top: 3px solid #004a99;
+  border-radius: 8px;
+  padding: 1rem;
+  background: #ffffff;
+  box-shadow: 0 1px 3px rgba(15, 23, 42, 0.07);
+  color: inherit;
+  text-decoration: none;
+}
+
+a.home-card:hover {
+  box-shadow: 0 6px 18px rgba(15, 23, 42, 0.11);
+}
+
+.home-card h3 {
+  margin: 0 0 0.4rem;
+}
+
+.home-card p {
+  margin: 0;
+  color: #526072;
+}
+
+/* Catalog summary color-coded grid */
+.cat-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0.6rem;
+  margin-top: 0.9rem;
+}
+
+@media (max-width: 60rem) {
+  .cat-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+@media (max-width: 40rem) {
+  .cat-grid { grid-template-columns: 1fr; }
+}
+
+.cat-card {
+  border: 1px solid #dde3ed;
+  border-radius: 6px;
+  padding: 0.55rem 0.65rem;
+  background: #ffffff;
+  box-shadow: 0 1px 2px rgba(15, 23, 42, 0.06);
+}
+
+.cat-card h3 {
+  margin: 0 0 0.35rem;
+  font-size: 0.68rem;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+.cat-card ul { margin: 0; padding-left: 0.85rem; }
+.cat-card li { margin: 0.12rem 0; color: #33445a; font-size: 0.68rem; line-height: 1.35; }
+
+.cat-card a,
+.cat-card a:visited { color: inherit; text-decoration: none; }
+.cat-card a:hover { text-decoration: underline; }
+
+.cat-card.rag        { border-top: 4px solid #1f6feb; }
+.cat-card.rag h3     { color: #1f6feb; }
+.cat-card.agents     { border-top: 4px solid #8250df; }
+.cat-card.agents h3  { color: #8250df; }
+.cat-card.mining     { border-top: 4px solid #1a7f64; }
+.cat-card.mining h3  { color: #1a7f64; }
+.cat-card.migrate    { border-top: 4px solid #bc4c00; }
+.cat-card.migrate h3 { color: #bc4c00; }
+.cat-card.platform   { border-top: 4px solid #0b1f3a; }
+.cat-card.platform h3{ color: #0b1f3a; }
+.cat-card.unified    { border-top: 4px solid #d29922; }
+.cat-card.unified h3 { color: #b8860b; }
+
+/* Left sidebar navigation clarity */
+.md-sidebar--primary {
+  border-right: 1px solid #e5ebf3;
+}
+
+.md-nav--primary .md-nav__title {
+  font-size: 0.6rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  color: #5e6b7a;
+}
+
+.md-nav--primary .md-nav__item--section > .md-nav__link {
+  font-size: 0.63rem;
+  font-weight: 700;
+  color: #243447;
+  cursor: default;
+}
+
+.md-nav--primary .md-nav__item .md-nav__link {
+  font-size: 0.63rem;
+  border-left: 3px solid transparent;
+  border-radius: 6px;
+  margin: 0.04rem 0;
+  padding: 0.14rem 0.4rem;
+  transition: background-color 120ms ease, color 120ms ease, border-color 120ms ease;
+}
+
+.md-nav--primary .md-nav__item .md-nav__link:hover {
+  background: #eef4fb;
+  border-left-color: #7ba9d6;
+  color: #123d69;
+}
+
+.md-nav--primary .md-nav__item .md-nav__link--active,
+.md-nav--primary .md-nav__item .md-nav__link--active:hover {
+  background: #e7f0fb;
+  border-left-color: #004a99;
+  color: #003366;
+  font-weight: 700;
+}
+
+.md-nav--primary .md-nav__list .md-nav__list {
+  margin-left: 0.45rem;
+  padding-left: 0.55rem;
+  border-left: 1px dashed #c8d8ea;
+}
+
+.md-nav--primary .md-nav__item .md-nav__link,
+.md-nav--primary .md-nav__item .md-nav__link span {
+  text-decoration: none;
+}
