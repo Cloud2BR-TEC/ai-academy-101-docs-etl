@@ -221,8 +221,8 @@ Assign owners at both platform and processor levels. The platform team owns runt
 
 Useful metrics include processor success and retry rates, execution duration, queue age, contract failures, version distribution, circuit-breaker state, resource consumption, review volume, and business quality by strategy.
 
-??? failure "Failure recovery reference"
-  | Failure scope | Recovery pattern |
+??? info "Recovery pattern reference"
+  | Recovery scope | Recovery pattern |
   | --- | --- |
   | Transient processor dependency | Bounded retry with backoff and idempotency |
   | Permanent document defect | Quarantine with reason and remediation owner |

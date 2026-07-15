@@ -181,8 +181,8 @@ Track more than OCR accuracy:
 - Exceptions by mapping rule and source.
 - Quality changes after extraction, mapping, or contract releases.
 
-??? failure "Failure handling reference"
-  | Failure | Meaning | Recommended response |
+??? example "Mapping exception response guide"
+  | Condition | Meaning | Recommended response |
   | --- | --- | --- |
   | No readable text | Corrupt, protected, or poor-quality source | Quarantine and request reacquisition |
   | Unexpected layout | Mapping preconditions do not match | Route to unknown-family review |

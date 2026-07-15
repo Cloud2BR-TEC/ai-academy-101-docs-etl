@@ -175,8 +175,8 @@ Monitor at least:
 - Retry volume, poison-queue age, and dependency throttling.
 - Cost per processed and successfully accepted invoice.
 
-??? failure "Failure scenarios and response"
-  | Failure | Automated response | Operational action |
+??? warning "Invoice exception response guide"
+  | Scenario | Automated response | Operational action |
   | --- | --- | --- |
   | Extraction timeout | Retry with bounded backoff | Check dependency health and queue age |
   | Unsupported or corrupt file | Quarantine without repeated extraction | Request a valid source document |

@@ -184,7 +184,7 @@ Define retention separately for source files, raw extraction responses, normaliz
 - Retain enough provenance to explain past processing decisions without retaining unnecessary sensitive content.
 - Test deletion and legal-hold procedures before relying on them for compliance.
 
-??? failure "Troubleshooting quick reference"
+??? question "Troubleshooting quick reference"
 	| Symptom | Likely causes | First checks |
 	| --- | --- | --- |
 	| Growing queue age | Throttling, reduced function capacity, slow dependency | Dependency response codes, concurrency, recent volume |

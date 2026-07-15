@@ -193,7 +193,7 @@ Test both routing and extraction because a correct extraction strategy is irrele
 - Strategy-pack exceptions and correction volume.
 - Quality drift by source, scan characteristics, and release version.
 
-??? failure "Common failure scenarios"
+??? question "Routing diagnostics and response"
   | Scenario | Detection | Response |
   | --- | --- | --- |
   | New unseen template | Low confidence or extraction validation failure | Unknown route and onboarding intake |
