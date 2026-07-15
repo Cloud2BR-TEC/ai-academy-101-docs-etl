@@ -194,10 +194,10 @@ Test both routing and extraction because a correct extraction strategy is irrele
 - Quality drift by source, scan characteristics, and release version.
 
 ??? question "Routing diagnostics and response"
-  | Scenario | Detection | Response |
-  | --- | --- | --- |
-  | New unseen template | Low confidence or extraction validation failure | Unknown route and onboarding intake |
-  | Similar templates confused | Confusion matrix and correction reasons | Add discriminating cues or merge strategy |
-  | Cue removed in redesign | Family-specific recall drop | Update pack through staged release |
-  | Scan removes color cue | Input-quality and cue diagnostics | Use non-color backup cues |
-  | Wrong family creates valid-looking output | Cross-field or source reconciliation | Stop delivery and investigate routing policy |
+    | Scenario | Detection | Response |
+    | --- | --- | --- |
+    | New unseen template | Low confidence or extraction validation failure | Unknown route and onboarding intake |
+    | Similar templates confused | Confusion matrix and correction reasons | Add discriminating cues or merge strategy |
+    | Cue removed in redesign | Family-specific recall drop | Update pack through staged release |
+    | Scan removes color cue | Input-quality and cue diagnostics | Use non-color backup cues |
+    | Wrong family creates valid-looking output | Cross-field or source reconciliation | Stop delivery and investigate routing policy |

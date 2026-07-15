@@ -176,11 +176,11 @@ Monitor at least:
 - Cost per processed and successfully accepted invoice.
 
 ??? warning "Invoice exception response guide"
-  | Scenario | Automated response | Operational action |
-  | --- | --- | --- |
-  | Extraction timeout | Retry with bounded backoff | Check dependency health and queue age |
-  | Unsupported or corrupt file | Quarantine without repeated extraction | Request a valid source document |
-  | Missing critical field | Route to review | Correct or reject with reason code |
-  | Arithmetic mismatch | Route to review or supplier workflow | Validate totals and business tolerance |
-  | Downstream unavailable | Retain accepted payload and retry delivery | Monitor acknowledgement backlog |
-  | Duplicate detected | Stop new delivery and link prior record | Confirm duplicate policy and audit trail |
+    | Scenario | Automated response | Operational action |
+    | --- | --- | --- |
+    | Extraction timeout | Retry with bounded backoff | Check dependency health and queue age |
+    | Unsupported or corrupt file | Quarantine without repeated extraction | Request a valid source document |
+    | Missing critical field | Route to review | Correct or reject with reason code |
+    | Arithmetic mismatch | Route to review or supplier workflow | Validate totals and business tolerance |
+    | Downstream unavailable | Retain accepted payload and retry delivery | Monitor acknowledgement backlog |
+    | Duplicate detected | Stop new delivery and link prior record | Confirm duplicate policy and audit trail |

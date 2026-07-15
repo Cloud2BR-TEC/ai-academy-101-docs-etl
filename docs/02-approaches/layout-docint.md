@@ -182,14 +182,14 @@ Track more than OCR accuracy:
 - Quality changes after extraction, mapping, or contract releases.
 
 ??? example "Mapping exception response guide"
-  | Condition | Meaning | Recommended response |
-  | --- | --- | --- |
-  | No readable text | Corrupt, protected, or poor-quality source | Quarantine and request reacquisition |
-  | Unexpected layout | Mapping preconditions do not match | Route to unknown-family review |
-  | Missing section | Optional content or template drift | Apply explicit optional rule or exception |
-  | Table structure mismatch | Columns/rows differ from known shape | Preserve raw table and route for mapping review |
-  | Contract validation failure | Normalized output is unsafe to publish | Stop delivery and record field-level errors |
-  | Downstream rejects version | Consumer compatibility issue | Retry only after contract or adapter correction |
+    | Condition | Meaning | Recommended response |
+    | --- | --- | --- |
+    | No readable text | Corrupt, protected, or poor-quality source | Quarantine and request reacquisition |
+    | Unexpected layout | Mapping preconditions do not match | Route to unknown-family review |
+    | Missing section | Optional content or template drift | Apply explicit optional rule or exception |
+    | Table structure mismatch | Columns/rows differ from known shape | Preserve raw table and route for mapping review |
+    | Contract validation failure | Normalized output is unsafe to publish | Stop delivery and record field-level errors |
+    | Downstream rejects version | Consumer compatibility issue | Retry only after contract or adapter correction |
 
 ## Scaling mapping ownership
 
