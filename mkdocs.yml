@@ -50,7 +50,7 @@ extra:
 nav:
   - Home: index.md
   - 01. Fundamentals:
-    - Course Overview: 01-fundamentals/index.md
+    - Overview: 01-fundamentals/index.md
   - 02. Approaches Catalog:
     - Overview and Decision Guide: 02-approaches/index.md
     - Invoice Processing with Document Intelligence: 02-approaches/invoice-docint.md

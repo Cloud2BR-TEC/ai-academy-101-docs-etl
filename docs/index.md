@@ -18,10 +18,10 @@ This content helps you evaluate and implement four Azure-focused document intell
 
 | Repository | Best for | Core pattern |
 | --- | --- | --- |
-| PDFs-Invoice-Processing-Fapp-DocIntelligence | Standardized invoices | Managed extraction using Document Intelligence invoice capabilities |
-| PDFs-Layouts-Processing-Fapp-DocIntelligence | Generic documents and forms | Layout-first extraction and transformation |
-| PDFs-MultiLayout-VisualCue-AzureAI-Document-Processing | Multiple templates with positional cues | Visual cue and multi-layout routing |
-| PDFs-Invoice-Processing-Fapp-OpenFramework | Custom invoice orchestration | Open framework pipeline with extensible stages |
+| <a href="https://github.com/Cloud2BR-MSFTLearningHub/PDFs-Invoice-Processing-Fapp-DocIntelligence" target="_blank" rel="noopener noreferrer">PDFs-Invoice-Processing-Fapp-DocIntelligence</a> | Standardized invoices | Managed extraction using Document Intelligence invoice capabilities |
+| <a href="https://github.com/Cloud2BR-MSFTLearningHub/PDFs-Layouts-Processing-Fapp-DocIntelligence" target="_blank" rel="noopener noreferrer">PDFs-Layouts-Processing-Fapp-DocIntelligence</a> | Generic documents and forms | Layout-first extraction and transformation |
+| <a href="https://github.com/Cloud2BR-MSFTLearningHub/PDFs-MultiLayout-VisualCue-AzureAI-Document-Processing" target="_blank" rel="noopener noreferrer">PDFs-MultiLayout-VisualCue-AzureAI-Document-Processing</a> | Multiple templates with positional cues | Visual cue and multi-layout routing |
+| <a href="https://github.com/Cloud2BR-MSFTLearningHub/PDFs-Invoice-Processing-Fapp-OpenFramework" target="_blank" rel="noopener noreferrer">PDFs-Invoice-Processing-Fapp-OpenFramework</a> | Custom invoice orchestration | Open framework pipeline with extensible stages |
 
 ## Learning outcomes
 
@@ -29,32 +29,6 @@ This content helps you evaluate and implement four Azure-focused document intell
 - Understand architecture building blocks for each pattern.
 - Apply enterprise considerations for operations, security, and governance.
 - Build a rollout plan from PoC to production.
-
-## Repositories
-
-<div class="home-grid">
-
-  <a class="home-card" href="https://github.com/Cloud2BR-MSFTLearningHub/PDFs-Invoice-Processing-Fapp-DocIntelligence">
-    <h3>PDFs-Invoice-Processing-Fapp-DocIntelligence</h3>
-    <p>Direct implementation repository for invoice extraction with Document Intelligence.</p>
-  </a>
-
-  <a class="home-card" href="https://github.com/Cloud2BR-MSFTLearningHub/PDFs-Layouts-Processing-Fapp-DocIntelligence">
-    <h3>PDFs-Layouts-Processing-Fapp-DocIntelligence</h3>
-    <p>Direct implementation repository for layout-first document extraction.</p>
-  </a>
-
-  <a class="home-card" href="https://github.com/Cloud2BR-MSFTLearningHub/PDFs-MultiLayout-VisualCue-AzureAI-Document-Processing">
-    <h3>PDFs-MultiLayout-VisualCue-AzureAI-Document-Processing</h3>
-    <p>Direct implementation repository for multi-layout and visual-cue routing.</p>
-  </a>
-
-  <a class="home-card" href="https://github.com/Cloud2BR-MSFTLearningHub/PDFs-Invoice-Processing-Fapp-OpenFramework">
-    <h3>PDFs-Invoice-Processing-Fapp-OpenFramework</h3>
-    <p>Direct implementation repository for open-framework invoice pipelines.</p>
-  </a>
-
-</div>
 
 !!! tip
     Start with the [Overview and Decision Guide](02-approaches/index.md) to select the right implementation quickly.
