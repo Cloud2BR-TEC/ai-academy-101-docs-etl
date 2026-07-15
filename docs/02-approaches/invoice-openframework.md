@@ -3,7 +3,7 @@
 **Repository:** [PDFs-Invoice-Processing-Fapp-OpenFramework](https://github.com/Cloud2BR-MSFTLearningHub/PDFs-Invoice-Processing-Fapp-OpenFramework)
 
 <div align="center">
-  <img src="../../assets/img/approaches/invoice-openframework.svg" alt="Invoice processing with open framework architecture" style="border-radius:10px;max-width:100%;"/>
+  <img src="../assets/img/approaches/invoice-openframework.svg" alt="Invoice processing with open framework architecture" style="border-radius:10px;max-width:100%;"/>
 </div>
 
 ## What this approach does

@@ -2,6 +2,7 @@ site_name: "Document Intelligence Approaches"
 site_description: "Architecture and implementation approaches for Azure document intelligence and ETL workloads."
 site_url: https://cloud2br-tec.github.io/ai-academy-101-docs-etl/
 docs_dir: docs
+use_directory_urls: false
 
 copyright: Copyright &copy; 2026 <a href="https://github.com/Cloud2BR-TEC" target="_blank" rel="noopener">Cloud2BR TEC</a>
 

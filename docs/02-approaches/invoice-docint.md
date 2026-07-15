@@ -3,7 +3,7 @@
 **Repository:** [PDFs-Invoice-Processing-Fapp-DocIntelligence](https://github.com/Cloud2BR-MSFTLearningHub/PDFs-Invoice-Processing-Fapp-DocIntelligence)
 
 <div align="center">
-  <img src="../../assets/img/approaches/invoice-docint.svg" alt="Invoice processing with Document Intelligence architecture" style="border-radius:10px;max-width:100%;"/>
+  <img src="../assets/img/approaches/invoice-docint.svg" alt="Invoice processing with Document Intelligence architecture" style="border-radius:10px;max-width:100%;"/>
 </div>
 
 ## What this approach does

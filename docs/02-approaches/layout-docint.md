@@ -3,7 +3,7 @@
 **Repository:** [PDFs-Layouts-Processing-Fapp-DocIntelligence](https://github.com/Cloud2BR-MSFTLearningHub/PDFs-Layouts-Processing-Fapp-DocIntelligence)
 
 <div align="center">
-  <img src="../../assets/img/approaches/layout-docint.svg" alt="Layout processing with Document Intelligence architecture" style="border-radius:10px;max-width:100%;"/>
+  <img src="../assets/img/approaches/layout-docint.svg" alt="Layout processing with Document Intelligence architecture" style="border-radius:10px;max-width:100%;"/>
 </div>
 
 ## What this approach does

@@ -3,7 +3,7 @@
 **Repository:** [PDFs-MultiLayout-VisualCue-AzureAI-Document-Processing](https://github.com/Cloud2BR-MSFTLearningHub/PDFs-MultiLayout-VisualCue-AzureAI-Document-Processing)
 
 <div align="center">
-  <img src="../../assets/img/approaches/multilayout-visualcue.svg" alt="Multi-layout visual cue processing architecture" style="border-radius:10px;max-width:100%;"/>
+  <img src="../assets/img/approaches/multilayout-visualcue.svg" alt="Multi-layout visual cue processing architecture" style="border-radius:10px;max-width:100%;"/>
 </div>
 
 ## What this approach does
