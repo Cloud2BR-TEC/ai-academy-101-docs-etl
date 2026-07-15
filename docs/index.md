@@ -6,14 +6,31 @@ This documentation presents a practical guide for designing document ETL pipelin
 <img src="assets/img/approaches/overview-map.svg" alt="Document intelligence approaches overview map" style="border-radius: 10px; max-width: 100%;"/>
 </p>
 
-## What you will learn
+## Overview
 
-- How each approach handles ingestion, extraction, normalization, and output.
-- Which approach is best for fixed invoices vs variable layouts.
-- Where visual-cue analysis adds value for complex documents.
-- When to use Open Framework-based pipelines for extensibility.
+Document ETL at enterprise scale is not one implementation, it is a set of patterns chosen by document variability, required accuracy, and integration constraints.
 
-## Repository cards
+## Objective
+
+This content helps you evaluate and implement four Azure-focused document intelligence approaches with clear trade-offs.
+
+## Included repositories
+
+| Repository | Best for | Core pattern |
+| --- | --- | --- |
+| PDFs-Invoice-Processing-Fapp-DocIntelligence | Standardized invoices | Managed extraction using Document Intelligence invoice capabilities |
+| PDFs-Layouts-Processing-Fapp-DocIntelligence | Generic documents and forms | Layout-first extraction and transformation |
+| PDFs-MultiLayout-VisualCue-AzureAI-Document-Processing | Multiple templates with positional cues | Visual cue and multi-layout routing |
+| PDFs-Invoice-Processing-Fapp-OpenFramework | Custom invoice orchestration | Open framework pipeline with extensible stages |
+
+## Learning outcomes
+
+- Identify the right approach from document complexity and business outcomes.
+- Understand architecture building blocks for each pattern.
+- Apply enterprise considerations for operations, security, and governance.
+- Build a rollout plan from PoC to production.
+
+## Repositories
 
 <div class="home-grid">
 
