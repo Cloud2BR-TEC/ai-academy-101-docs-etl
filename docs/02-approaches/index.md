@@ -15,6 +15,32 @@ Use this page as the selection entry point for the four implementation repositor
 | Multi-Layout Visual Cue | Handles mixed templates and positional anchors well | More complex routing and visual rule maintenance | [PDFs-MultiLayout-VisualCue-AzureAI-Document-Processing](https://github.com/Cloud2BR-MSFTLearningHub/PDFs-MultiLayout-VisualCue-AzureAI-Document-Processing) |
 | Invoice + Open Framework | Maximum extensibility and custom business logic integration | Higher engineering ownership and governance needs | [PDFs-Invoice-Processing-Fapp-OpenFramework](https://github.com/Cloud2BR-MSFTLearningHub/PDFs-Invoice-Processing-Fapp-OpenFramework) |
 
+## Open repository cards
+
+<div class="home-grid">
+
+	<a class="home-card" href="https://github.com/Cloud2BR-MSFTLearningHub/PDFs-Invoice-Processing-Fapp-DocIntelligence">
+		<h3>Invoice Processing Fapp DocIntelligence</h3>
+		<p>Open repository</p>
+	</a>
+
+	<a class="home-card" href="https://github.com/Cloud2BR-MSFTLearningHub/PDFs-Layouts-Processing-Fapp-DocIntelligence">
+		<h3>Layouts Processing Fapp DocIntelligence</h3>
+		<p>Open repository</p>
+	</a>
+
+	<a class="home-card" href="https://github.com/Cloud2BR-MSFTLearningHub/PDFs-MultiLayout-VisualCue-AzureAI-Document-Processing">
+		<h3>MultiLayout VisualCue AzureAI Document Processing</h3>
+		<p>Open repository</p>
+	</a>
+
+	<a class="home-card" href="https://github.com/Cloud2BR-MSFTLearningHub/PDFs-Invoice-Processing-Fapp-OpenFramework">
+		<h3>Invoice Processing Fapp OpenFramework</h3>
+		<p>Open repository</p>
+	</a>
+
+</div>
+
 ## Decision flow
 
 - If your documents are mostly invoices with stable fields, start with **Invoice + Document Intelligence**.

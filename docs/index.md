@@ -1,6 +1,6 @@
 # Document Intelligence Approaches
 
-This course presents a practical guide for designing document ETL pipelines using Azure services and implementation patterns from four real repositories.
+This documentation presents a practical guide for designing document ETL pipelines using Azure services and implementation patterns from four real repositories.
 
 <p align="center">
 <img src="assets/img/approaches/overview-map.svg" alt="Document intelligence approaches overview map" style="border-radius: 10px; max-width: 100%;"/>
@@ -35,6 +35,32 @@ This course presents a practical guide for designing document ETL pipelines usin
   <a class="home-card" href="02-approaches/invoice-openframework.md">
     <h3>Invoice + Open Framework</h3>
     <p>Open, modular invoice pipeline for custom enrichment and orchestration.</p>
+  </a>
+
+</div>
+
+## Repository cards
+
+<div class="home-grid">
+
+  <a class="home-card" href="https://github.com/Cloud2BR-MSFTLearningHub/PDFs-Invoice-Processing-Fapp-DocIntelligence">
+    <h3>PDFs-Invoice-Processing-Fapp-DocIntelligence</h3>
+    <p>Direct implementation repository for invoice extraction with Document Intelligence.</p>
+  </a>
+
+  <a class="home-card" href="https://github.com/Cloud2BR-MSFTLearningHub/PDFs-Layouts-Processing-Fapp-DocIntelligence">
+    <h3>PDFs-Layouts-Processing-Fapp-DocIntelligence</h3>
+    <p>Direct implementation repository for layout-first document extraction.</p>
+  </a>
+
+  <a class="home-card" href="https://github.com/Cloud2BR-MSFTLearningHub/PDFs-MultiLayout-VisualCue-AzureAI-Document-Processing">
+    <h3>PDFs-MultiLayout-VisualCue-AzureAI-Document-Processing</h3>
+    <p>Direct implementation repository for multi-layout and visual-cue routing.</p>
+  </a>
+
+  <a class="home-card" href="https://github.com/Cloud2BR-MSFTLearningHub/PDFs-Invoice-Processing-Fapp-OpenFramework">
+    <h3>PDFs-Invoice-Processing-Fapp-OpenFramework</h3>
+    <p>Direct implementation repository for open-framework invoice pipelines.</p>
   </a>
 
 </div>

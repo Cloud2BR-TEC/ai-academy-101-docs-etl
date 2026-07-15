@@ -1,10 +1,10 @@
-# Course Overview
+# Overview
 
 Document ETL at enterprise scale is not one implementation, it is a set of patterns chosen by document variability, required accuracy, and integration constraints.
 
-## Course objective
+## Objective
 
-This course helps you evaluate and implement four Azure-focused document intelligence approaches with clear trade-offs.
+This content helps you evaluate and implement four Azure-focused document intelligence approaches with clear trade-offs.
 
 ## Included repositories
 
