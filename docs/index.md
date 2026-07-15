@@ -6,14 +6,6 @@ This documentation presents a practical guide for designing document ETL pipelin
 <img src="assets/img/approaches/overview-map.svg" alt="Document intelligence approaches overview map" style="border-radius: 10px; max-width: 100%;"/>
 </p>
 
-## Overview
-
-Document ETL at enterprise scale is not one implementation, it is a set of patterns chosen by document variability, required accuracy, and integration constraints.
-
-## Objective
-
-This content helps you evaluate and implement four Azure-focused document intelligence approaches with clear trade-offs.
-
 ## Included repositories
 
 | Repository | Best for | Core pattern |
