@@ -4,6 +4,10 @@ Document ETL pipelines handle sensitive data, so security controls must be integ
 
 This baseline applies to all approach patterns and should be implemented as shared platform standards, not optional per-project add-ons.
 
+<p align="center">
+<img src="../assets/img/security/security-baseline.svg" alt="Defense-in-depth security baseline layers" style="border-radius: 10px; max-width: 100%;"/>
+</p>
+
 ## Baseline controls
 
 - Identity-first access with Microsoft Entra ID.

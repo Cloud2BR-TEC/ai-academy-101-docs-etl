@@ -4,6 +4,10 @@ This view consolidates the Azure services referenced across all four repositorie
 
 It is designed to provide a common language for technical and non-technical stakeholders before they choose a specific implementation approach.
 
+<p align="center">
+<img src="../assets/img/fundamentals/service-flow.svg" alt="End-to-end Azure service flow for document ETL" style="border-radius: 10px; max-width: 100%;"/>
+</p>
+
 ## Repositories in scope
 
 - [PDFs-Invoice-Processing-Fapp-DocIntelligence](https://github.com/Cloud2BR-MSFTLearningHub/PDFs-Invoice-Processing-Fapp-DocIntelligence)

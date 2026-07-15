@@ -4,6 +4,10 @@ This page summarizes architecture patterns to operationalize document intelligen
 
 Its purpose is to show how pattern choice affects architecture composition, delivery complexity, and platform operating model.
 
+<p align="center">
+<img src="../assets/img/enterprise/architecture-blocks.svg" alt="Reference architecture blocks for document ETL pipelines" style="border-radius: 10px; max-width: 100%;"/>
+</p>
+
 ## Reference architecture blocks
 
 - Ingestion: Blob Storage, queues, event triggers.

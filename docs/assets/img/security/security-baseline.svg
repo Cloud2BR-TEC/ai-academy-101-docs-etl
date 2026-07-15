@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 400" font-family="Segoe UI, Arial, sans-serif">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#f8fbff"/>
+      <stop offset="1" stop-color="#eef3fa"/>
+    </linearGradient>
+    <filter id="cardShadow" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="3" stdDeviation="6" flood-color="#0b1f3a" flood-opacity="0.14"/>
+    </filter>
+  </defs>
+
+  <rect width="1200" height="400" rx="18" fill="url(#bg)"/>
+  <text x="46" y="48" font-size="26" font-weight="700" fill="#0b1f3a">Security &amp; Compliance Baseline</text>
+  <text x="46" y="74" font-size="14" fill="#5a6b82">Defense-in-depth controls applied consistently across every pipeline</text>
+
+  <rect x="46" y="100" width="1108" height="250" rx="14" fill="#ffffff" stroke="#d9e2ef" filter="url(#cardShadow)"/>
+
+  <!-- Row 1: Identity -->
+  <rect x="70" y="170" width="110" height="28" rx="14" fill="#ede9fe"/>
+  <text x="125" y="189" font-size="12" font-weight="700" fill="#6d28d9" text-anchor="middle">IDENTITY</text>
+
+  <rect x="196" y="170" width="84" height="28" rx="14" fill="#f5f3ff" stroke="#ddd6fe"/>
+  <text x="238" y="189" font-size="12" fill="#4c1d95" text-anchor="middle">Entra ID</text>
+
+  <rect x="292" y="170" width="161" height="28" rx="14" fill="#f5f3ff" stroke="#ddd6fe"/>
+  <text x="372" y="189" font-size="12" fill="#4c1d95" text-anchor="middle">Conditional Access</text>
+
+  <rect x="465" y="170" width="56" height="28" rx="14" fill="#f5f3ff" stroke="#ddd6fe"/>
+  <text x="493" y="189" font-size="12" fill="#4c1d95" text-anchor="middle">RBAC</text>
+
+  <rect x="533" y="170" width="154" height="28" rx="14" fill="#f5f3ff" stroke="#ddd6fe"/>
+  <text x="610" y="189" font-size="12" fill="#4c1d95" text-anchor="middle">Managed Identities</text>
+
+  <!-- Row 2: Network -->
+  <rect x="70" y="210" width="110" height="28" rx="14" fill="#dbeafe"/>
+  <text x="125" y="229" font-size="12" font-weight="700" fill="#1f6feb" text-anchor="middle">NETWORK</text>
+
+  <rect x="196" y="210" width="154" height="28" rx="14" fill="#eff6ff" stroke="#bfdbfe"/>
+  <text x="273" y="229" font-size="12" fill="#1e40af" text-anchor="middle">Private Endpoints</text>
+
+  <rect x="362" y="210" width="49" height="28" rx="14" fill="#eff6ff" stroke="#bfdbfe"/>
+  <text x="386" y="229" font-size="12" fill="#1e40af" text-anchor="middle">NSG</text>
+
+  <rect x="423" y="210" width="126" height="28" rx="14" fill="#eff6ff" stroke="#bfdbfe"/>
+  <text x="486" y="229" font-size="12" fill="#1e40af" text-anchor="middle">Azure Firewall</text>
+
+  <rect x="561" y="210" width="49" height="28" rx="14" fill="#eff6ff" stroke="#bfdbfe"/>
+  <text x="585" y="229" font-size="12" fill="#1e40af" text-anchor="middle">WAF</text>
+
+  <!-- Row 3: Data -->
+  <rect x="70" y="250" width="110" height="28" rx="14" fill="#fee2e2"/>
+  <text x="125" y="269" font-size="12" font-weight="700" fill="#b91c1c" text-anchor="middle">DATA</text>
+
+  <rect x="196" y="250" width="91" height="28" rx="14" fill="#fff5f5" stroke="#f3a5a5"/>
+  <text x="241" y="269" font-size="12" fill="#7a1f1f" text-anchor="middle">Key Vault</text>
+
+  <rect x="299" y="250" width="77" height="28" rx="14" fill="#fff5f5" stroke="#f3a5a5"/>
+  <text x="337" y="269" font-size="12" fill="#7a1f1f" text-anchor="middle">Purview</text>
+
+  <rect x="388" y="250" width="154" height="28" rx="14" fill="#fff5f5" stroke="#f3a5a5"/>
+  <text x="465" y="269" font-size="12" fill="#7a1f1f" text-anchor="middle">Sensitivity Labels</text>
+
+  <rect x="554" y="250" width="49" height="28" rx="14" fill="#fff5f5" stroke="#f3a5a5"/>
+  <text x="578" y="269" font-size="12" fill="#7a1f1f" text-anchor="middle">DLP</text>
+
+  <!-- Row 4: Monitor -->
+  <rect x="70" y="290" width="110" height="28" rx="14" fill="#dcfce7"/>
+  <text x="125" y="309" font-size="12" font-weight="700" fill="#15803d" text-anchor="middle">MONITOR</text>
+
+  <rect x="196" y="290" width="161" height="28" rx="14" fill="#f2fbf5" stroke="#a7dcb5"/>
+  <text x="276" y="309" font-size="12" fill="#1c5c34" text-anchor="middle">Defender for Cloud</text>
+
+  <rect x="369" y="290" width="119" height="28" rx="14" fill="#f2fbf5" stroke="#a7dcb5"/>
+  <text x="428" y="309" font-size="12" fill="#1c5c34" text-anchor="middle">Azure Monitor</text>
+
+  <rect x="500" y="290" width="154" height="28" rx="14" fill="#f2fbf5" stroke="#a7dcb5"/>
+  <text x="577" y="309" font-size="12" fill="#1c5c34" text-anchor="middle">Microsoft Sentinel</text>
+
+  <text x="70" y="374" font-size="12" font-style="italic" fill="#5a6b82">Apply every layer consistently, regardless of the chosen approach pattern.</text>
+</svg>

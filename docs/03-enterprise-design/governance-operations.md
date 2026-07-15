@@ -2,6 +2,10 @@
 
 This page defines the operating model needed to keep document ETL solutions reliable, auditable, and cost-effective as scope grows.
 
+<p align="center">
+<img src="../assets/img/enterprise/governance-operations.svg" alt="Governance and operations continuous cycle model" style="border-radius: 10px; max-width: 100%;"/>
+</p>
+
 ## Governance priorities
 
 - Define data classification and retention per document type.
