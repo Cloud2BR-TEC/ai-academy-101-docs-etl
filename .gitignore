@@ -1,3 +1,33 @@
+# MkDocs build output
 site/
+
+# Python bytecode and tooling caches
 __pycache__/
-*.pyc
+*.py[cod]
+*.so
+.mypy_cache/
+.pytest_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Python virtual environments
+.venv/
+venv/
+env/
+
+# Operating system files
+.DS_Store
+Thumbs.db
+
+# Editor settings
+.vscode/
+!.vscode/extensions.json
+.idea/
+
+# Local environment files and credentials
+.env
+.env.*
+!.env.example
+*.pem
+*.key
